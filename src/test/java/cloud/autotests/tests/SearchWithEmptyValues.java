@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 @Feature("Проверка поиска")
-public class SearchWithEmptyValues {
+public class SearchWithEmptyValues extends TestBase {
     @Test
     @AllureId("5989")
     @Description("Soon to be implemented by you (or QA.GURU engineers)")

@@ -1,44 +1,49 @@
-# Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
+# Пример создания автотестов для сайта
+# компании [Innostage](https://innostage-group.ru/)
 
-# Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
+В данном проекте представлен пример создания UI автотестов для web-версии сайта
+https://innostage-group.ru
+## Тестируемая область:
 
+- [x] Title главной страницы;
+- [x] Поле поиска;
+- [x] Наличие ошибок в консоле.
 
-# USAGE examples
+## Использован стек технологий:
 
-### For run remote tests need fill remote.properties or to pass value:
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40"/> Java для написания кода
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" width="40"/> Selenide для написания кода
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40"/> Selenoid запуск автотестов в изолированных сессиях на билд-сервере
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" width="40"/> Allure Report для создания отчетности
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" width="40"/> JUnit для написания кода
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" width="40"/> Gradle для сборки
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40"/> Jenkins для запуска автотестов на удаленном сервере
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40"/> Allure TestOps для создания документации
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40"/> Telegram бот для уведомлений
 
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
+# Конфигурация для запуска тестов
+Параметры для запуска автотестов в удаленном браузере на билд-сервере проекта
+autotests.cloud задаются в настройках job CI Jenkins в виде Choice Parameter
+и передаются в код проекта через терминал как системные переменные (в фигурных скобках) с помощью следующих команд:
 
-
-Run tests with filled remote.properties:
 ```bash
-gradle clean test
+clean
+test
+-Dbrowser=${BROWSER} // запускаемый браузер
+-DbrowserVersion=${BROWSER_VERSION} // версия браузера
+-DbrowserSize=${BROWSER_SIZE} // размер окна браузера
+-DremoteDriverUrl=https://<username>:<password>@${REMOTE_DRIVER_URL}/wd/hub/ // URL сервера, на котором запускаются тесты
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/ // URL сервера с видеофайлами выполнения тестов
+-Dthreads=${THREADS} // число потоков для прогона тестов
+allure serve build/allure-results Генерация отчета
 ```
-
-Run tests with not filled remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
-```
-
-Serve report:
-```bash
-allure serve build/allure-results
-```
-
-
-###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
-```
-
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+### Для запуска автотестов на удаленной машине использован bild server Jenkins
+![image](src/test/resources/files/jenkins.jpg)
+### Тестовая документация хранится в Allure TestOpts
+![image](src/test/resources/files/allure_testopt.jpg)
+### Отчетность генерируется с помощью Allure reports
+![image](src/test/resources/files/allure.jpg)
+### Уведомления о результатах тестирования уходят в Telegram
+![image](src/test/resources/files/telegram.jpg)
+### Видеотчет теста "Поиск товара"
+![image](src/test/resources/files/Video.gif)

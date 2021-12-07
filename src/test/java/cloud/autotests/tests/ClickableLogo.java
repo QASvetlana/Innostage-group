@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Feature("Главная страница")
-public class ClickableLogo {
+public class ClickableLogo extends TestBase {
     @Test
     @AllureId("5990")
     @Description("Clickable logo")

@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Feature("Проверка поиска")
-public class SearchWithValues {
+public class SearchWithValues extends TestBase {
     @Test
     @AllureId("5987")
     @Description("Checking search with valid values")
