@@ -1,4 +1,4 @@
-package cloud.autotests.config.demowebshop;
+package cloud.autotests.config;
 
 import org.aeonbits.owner.ConfigFactory;
 
