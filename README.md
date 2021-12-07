@@ -38,12 +38,12 @@ test
 allure serve build/allure-results Генерация отчета
 ```
 ### Для запуска автотестов на удаленной машине использован bild server Jenkins
-![image](src/test/resources/files/jenkins.jpg)
+![image](src/test/resources/files/Jenkins.jpg)
 ### Тестовая документация хранится в Allure TestOpts
-![image](src/test/resources/files/allure_testopt.jpg)
+![image](src/test/resources/files/AllureTestOps.jpg)
 ### Отчетность генерируется с помощью Allure reports
-![image](src/test/resources/files/allure.jpg)
+![image](src/test/resources/files/Allure.jpg)
 ### Уведомления о результатах тестирования уходят в Telegram
-![image](src/test/resources/files/telegram.jpg)
+![image](src/test/resources/files/Telegram.jpg)
 ### Видеотчет теста "Поиск товара"
-![image](src/test/resources/files/Video.gif)
+![image](src/test/resources/files/Gif.gif)
