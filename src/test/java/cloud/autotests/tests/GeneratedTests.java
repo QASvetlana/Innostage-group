@@ -1,8 +1,10 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +15,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class GeneratedTests extends TestBase {
+    @BeforeAll
+    static void beforeAll() {
+
+        Configuration.startMaximized = true;
+        Configuration.baseUrl = "https://innostage-group.ru/";
+    }
 
 
     @Test
@@ -21,7 +29,7 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("Open url 'https://innostage-group.ru//'", () ->
-                open("https://innostage-group.ru//"));
+                open(Configuration.baseUrl));
 
         step("Page title should have text 'Innostage - системная интеграция, консалтинг и аутсорсинг IT услуг'", () -> {
             String expectedTitle = "Innostage - системная интеграция, консалтинг и аутсорсинг IT услуг";
@@ -37,7 +45,7 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("Open url 'https://innostage-group.ru/'", () ->
-                open("https://innostage-group.ru/"));
+                open(Configuration.baseUrl));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();

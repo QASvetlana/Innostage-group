@@ -1,8 +1,10 @@
 package cloud.autotests.tests;
 
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,12 +16,19 @@ import static com.codeborne.selenide.Selenide.open;
 
 @Feature("Проверка поиска")
 public class SearchWithValues extends TestBase {
+    @BeforeAll
+    static void beforeAll() {
+
+        Configuration.startMaximized = true;
+        Configuration.baseUrl = "https://innostage-group.ru/";
+    }
+
     @Test
     @AllureId("5987")
     @Description("Checking search with valid values")
     @DisplayName("Проверка поиска с валидными значениями")
     void generatedTest() {
-        open("https://innostage-group.ru/");
+        open(Configuration.baseUrl);
         $(byCssSelector(".show-fixed .svg")).click();
         $(byCssSelector("#title-search-input")).setValue("безопасность");
         $(byText("Найти")).click();
