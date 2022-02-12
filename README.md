@@ -6,18 +6,43 @@
 - [x] Поле поиска
 - [x] Наличие ошибок в консоле
 
-## Использован стек технологий:
+## Используемые технологии и инструменты
 
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40"/> Java для написания кода
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" width="40"/> Selenide для написания кода
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40"/> Selenoid запуск автотестов в изолированных сессиях на билд-сервере
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" width="40"/> Allure Report для создания отчетности
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" width="40"/> JUnit для написания кода
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" width="40"/> Gradle для сборки
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40"/> Jenkins для запуска автотестов на удаленном сервере
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40"/> Allure TestOps для создания документации
-<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40"/> Telegram бот для уведомлений
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/>
+</a>
+<a href="https://www.java.com/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40" height="40"  alt="Java"/>
+</a>
+<a href="https://ru.selenide.org/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" width="40" height="40"  alt="Selenide"/>
+</a>
+<a href="https://aerokube.com/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
+</a>
+<a href="https://gradle.org/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" width="40" height="40"  alt="Gradle"/>
+</a>
+<a href="https://junit.org/junit5/docs/current/user-guide/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/>
+</a>
+<a href="https://allure.qatools.ru/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" width="40" height="40"  alt="Allure SE"/>
+</a>
+<a href="https://qameta.io/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40" height="40"  alt="Allure EE"/>
+</a>
+<a href="https://github.com/PavelSemenovNickolaevich">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40" height="40"  alt="Github"/>
+</a>
+<a href="https://www.jenkins.io/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
+</a>
+<a href="https://web.telegram.org/k/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40" height="40"  alt="Telegram"/>
+</a>
 
+IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestOps, Github, Jenkins, Telegram (reports)
 # Конфигурация для запуска тестов
 Параметры для запуска автотестов в удаленном браузере на билд-сервере проекта
 autotests.cloud задаются в настройках job CI Jenkins в виде Choice Parameter
