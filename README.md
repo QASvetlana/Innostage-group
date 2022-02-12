@@ -57,6 +57,8 @@ test
 -DremoteDriverUrl=https://<username>:<password>@${REMOTE_DRIVER_URL}/wd/hub/ // URL сервера, на котором запускаются тесты
 -DvideoStorage=https://${REMOTE_DRIVER_URL}/video/ // URL сервера с видеофайлами выполнения тестов
 -Dthreads=${THREADS} // число потоков для прогона тестов
+
+
 allure serve build/allure-results Генерация отчета
 ```
 ### Для запуска автотестов на удаленной машине использован bild server Jenkins
