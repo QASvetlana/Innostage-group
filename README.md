@@ -32,7 +32,7 @@
 <a href="https://qameta.io/">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40" height="40"  alt="Allure EE"/>
 </a>
-<a href="https://github.com/PavelSemenovNickolaevich">
+<a href="https://github.com/QASvetlana">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40" height="40"  alt="Github"/>
 </a>
 <a href="https://www.jenkins.io/">
