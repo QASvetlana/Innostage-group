@@ -63,14 +63,14 @@ allure serve build/allure-results Генерация отчета
 ### Для запуска автотестов на удаленной машине использован build server Jenkins
 ![image](src/files/Jenkins.jpg)
 ### Тестовая документация хранится в Allure TestOpts
-![image](src/test/resources/files/AllureTestOps.jpg)
+![image](src/files/AllureTestOps.jpg)
 ### Отчетность генерируется с помощью Allure reports
-![image](src/test/resources/files/Allure.jpg)
+![image](src/files/Allure.jpg)
 ### Интеграция с Jira 
 Доступен список тест-кейсов, а так же приложен результат запуска автотестов
-![image](src/test/resources/files/jira1.jpg)
-![image](src/test/resources/files/jira2.jpg)
+![image](src/files/jira1.jpg)
+![image](src/files/jira2.jpg)
 ### Уведомления о результатах тестирования уходят в Telegram
-![image](src/test/resources/files/Telegram.jpg)
+![image](src/files/Telegram.jpg)
 ### Видеотчет теста "Поиск товара"
-![image](src/test/resources/files/Gif.gif)
+![image](src/files/Gif.gif)
