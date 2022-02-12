@@ -37,7 +37,8 @@ public class SearchTests extends TestBase {
         $(".show-fixed .svg").click();
         $("#title-search-input").setValue("безопасность");
         $(byText("Найти")).click();
-        $(".item:nth-child(1) > .title b").shouldHave(text("безопасность"));
+        // $(".item:nth-child(1) > .title b").shouldHave(text("безопасность"));
+        $(".search-page.items").shouldHave(text("безопасность"));
     }
 
 }
