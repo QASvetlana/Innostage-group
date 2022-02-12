@@ -60,7 +60,7 @@ test
 
 allure serve build/allure-results Генерация отчета
 ```
-### Для запуска автотестов на удаленной машине использован bild server Jenkins
+### Для запуска автотестов на удаленной машине использован build server Jenkins
 ![image](src/test/resources/files/Jenkins.jpg)
 ### Тестовая документация хранится в Allure TestOpts
 ![image](src/test/resources/files/AllureTestOps.jpg)
